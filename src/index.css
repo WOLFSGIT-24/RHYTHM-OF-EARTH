@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tertiary: #3e5c32;
+  --color-outline: #717973;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #557A46;
+  --color-surface-container: #eef4ec;
+  --color-on-secondary-fixed: #1e3319;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-fixed: #1e3319;
+  --color-on-error-container: #93000a;
+  --color-surface-bright: #F8F8F8;
+  --color-on-tertiary-fixed-variant: #5f4025;
+  --color-inverse-primary: #a0c49d;
+  --color-inverse-surface: #222222;
+  --color-on-tertiary-fixed: #2d1601;
+  --color-surface-tint: #557A46;
+  --color-surface-container-low: #f4f7f2;
+  --color-surface-dim: #e2ebd8;
+  --color-primary: #3b5730;
+  --color-on-secondary-fixed-variant: #3e5c32;
+  --color-on-primary-container: #a0c49d;
+  --color-error-container: #ffdad6;
+  --color-secondary-fixed: #a0c49d;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-container: #3e5c32;
+  --color-on-tertiary-container: #ffffff;
+  --color-on-surface: #222222;
+  --color-secondary: #557A46;
+  --color-on-error: #ffffff;
+  --color-error: #ba1a1a;
+  --color-background: #F8F8F8;
+  --color-inverse-on-surface: #f4f7f2;
+  --color-tertiary-fixed-dim: #a0c49d;
+  --color-surface-container-highest: #e2ebd8;
+  --color-on-secondary: #ffffff;
+  --color-outline-variant: #c1c8c2;
+  --color-surface: #F8F8F8;
+  --color-primary-container: #557A46;
+  --color-on-surface-variant: #4a5545;
+  --color-on-background: #222222;
+  --color-tertiary-fixed: #c2e0be;
+  --color-secondary-fixed-dim: #a0c49d;
+  --color-surface-container-high: #e2ebd8;
+  --color-primary-fixed-dim: #a0c49d;
+  --color-on-primary-fixed-variant: #1e3319;
+  --color-secondary-container: #a0c49d;
+  --color-surface-variant: #eef4ec;
+  --color-primary-fixed: #c2e0be;
+
+  --spacing-space-md: 1rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-margin: 4rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-gutter: 1.75rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-space-xl: 3rem;
+
+  --font-playfair: 'Raleway', 'Playfair Display', sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', 'Open Sans', sans-serif;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-plus-jakarta);
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom font styling utility classes matching tailwind script config */
+.font-display-lg, .font-headline-sm, .font-headline-md, .font-headline-lg, .font-display-md, .font-display-md-mobile, .font-display-lg-mobile {
+  font-family: var(--font-playfair);
+}
+
+.font-label-md, .font-label-lg, .font-label-sm, .font-body-sm, .font-body-md, .font-body-lg, .font-title-lg, .font-title-md {
+  font-family: var(--font-plus-jakarta);
+}
+
+.text-label-sm { font-size: 11px; line-height: 14px; letter-spacing: 0.08em; font-weight: 700; }
+.text-label-md { font-size: 12px; line-height: 16px; letter-spacing: 0.06em; font-weight: 600; }
+.text-label-lg { font-size: 14px; line-height: 20px; letter-spacing: 0.04em; font-weight: 600; }
+.text-body-sm { font-size: 13px; line-height: 20px; font-weight: 400; }
+.text-body-md { font-size: 15px; line-height: 24px; font-weight: 400; }
+.text-body-lg { font-size: 17px; line-height: 28px; font-weight: 400; }
+.text-title-md { font-size: 18px; line-height: 26px; font-weight: 600; }
+.text-title-lg { font-size: 20px; line-height: 28px; font-weight: 600; }
+.text-headline-sm { font-size: 22px; line-height: 30px; font-weight: 600; }
+.text-headline-md { font-size: 26px; line-height: 34px; font-weight: 600; }
+.text-headline-lg { font-size: 32px; line-height: 40px; letter-spacing: -0.01em; font-weight: 700; }
+.text-display-md-mobile { font-size: 30px; line-height: 38px; letter-spacing: -0.01em; font-weight: 600; }
+.text-display-md { font-size: 44px; line-height: 54px; letter-spacing: -0.02em; font-weight: 700; }
+.text-display-lg-mobile { font-size: 36px; line-height: 44px; letter-spacing: -0.01em; font-weight: 700; }
+.text-display-lg { font-size: 56px; line-height: 68px; letter-spacing: -0.02em; font-weight: 700; }
